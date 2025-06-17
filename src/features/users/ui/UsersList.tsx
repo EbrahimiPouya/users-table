@@ -25,18 +25,18 @@ const columns : IColType<UserType>[] = [
     },
     {
         title: 'نام',
-        field: 'first_name',
+        field: 'firstName',
         className: '',
         render: (row)=>{
-         return row.first_name
+         return row.firstName
         }
     },
     {
         title: 'نام خانوادگی',
-        field: 'last_name',
+        field: 'lastName',
         className: '',
         render: (row)=>{
-         return row.last_name
+         return row.lastName
         }
     },
     {
@@ -48,11 +48,14 @@ const columns : IColType<UserType>[] = [
         }
     },
     {
-        title: 'نام کاربری',
-        field: 'username',
+        title: 'عملیات',
+        field: 'actions',
         className: '',
-        render: (row)=>{
-         return row.username
+        render: ()=>{
+         return <select>
+             <option value={'show'}>مشاهده</option>
+             <option value={'delete'}>حذف</option>
+         </select>
         }
     },
 ]
